@@ -1,0 +1,52 @@
+body {
+  background: lightgrey;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.now-playing {
+  border-bottom: 3px solid black;
+  height: 155px;
+}
+.song-search {
+  height: 125px;
+  border-bottom: 3px solid darkgrey;
+}
+input[type='text'] {
+    width: 400px;
+    margin-top: 50px;
+    border-radius: 5px;
+    height: 25px;
+    margin-left: 420px;
+}
+audio {
+  width: 600px;
+  margin-left: 340px;
+  margin-top: 50px;
+}
+
+.result-grid {
+  width: 250px;
+  // height: 250px;
+  float: left;
+}
+.avatar img {
+  width: 225px;
+  height: 225px;
+}
+.title {
+  text-align: center;
+}
+.band {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
