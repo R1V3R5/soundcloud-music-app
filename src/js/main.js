@@ -21,7 +21,8 @@ function resultTmpl(data) {
 				<h5>${data.user.username}</h5>
 			</div>
 		</div>`
-  $('.search-results').append(template)
+  console.log(template)
+  return template;
 };
 
 
@@ -39,6 +40,7 @@ function clickMe() {
     streamTmpl(event.delegateTarget.href);
   })
 };
+var resultsHTML;
 
 $('.search-button').on('click', function(event) {
   event.preventDefault();
@@ -48,9 +50,9 @@ $('.search-button').on('click', function(event) {
     url: `${baseURL}/tracks?${clientID}&q=${q}`
   }).then(function(response) {
     console.log(response);
-    response.forEach(function(item) {
-      resultTmpl(item);
-    })
+    resultsHTML = response.map(resultTmpl)
+    console.log(resultsHTML)
+    $('.search-results').html(resultsHTML)
     clickMe();
   })
 
