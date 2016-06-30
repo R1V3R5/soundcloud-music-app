@@ -1,3 +1,5 @@
+[Normal Mode on Surge](http://tiy-joshuarivers-soundcloud-music-app.surge.sh)
+
 ## Learning Objectives
 
 After completing this assignment, you should:
@@ -27,7 +29,8 @@ After completing this assignment, you should:
 Note, the below wireframe is just an idea of the structure. You can follow it perfectly or do something completely different. As long as the requirements above are there, then you win.
 
 * [Music App Wireframe](https://tiy-learn-content.s3.amazonaws.com/c888498b-musicapp.jpg)
+
 ## Hard Mode
 
-Implement some sort of sorting (possibly using [Lodash](https://lodash.com/))
-Research & Implement a better audio player than the standard `<audio>` tag.
+* Implement some sort of sorting (possibly using [Lodash](https://lodash.com/))
+* Research & Implement a better audio player than the standard `<audio>` tag.

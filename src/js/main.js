@@ -22,13 +22,12 @@ function resultTmpl(data) {
 			</div>
 		</div>`
   $('.search-results').append(template)
-
 };
 
 
 function streamTmpl(data) {
   var audioTmpl = `
-  	<audio src="${data.stream_url}?${clientID}" autobuffer autoloop loop controls></audio>
+  	<audio src="${data}" autobuffer autoloop loop controls autoplay></audio>
   `
   $('.now-playing').html(audioTmpl)
 };
@@ -37,7 +36,7 @@ function streamTmpl(data) {
 function clickMe() {
   $('.play-me').on('click', function(event) {
     event.preventDefault();
-    console.log(event);
+    streamTmpl(event.delegateTarget.href);
   })
 };
 
@@ -52,8 +51,9 @@ $('.search-button').on('click', function(event) {
     response.forEach(function(item) {
       resultTmpl(item);
     })
+    clickMe();
   })
-  clickMe();
+
 });
 
 
